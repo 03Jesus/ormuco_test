@@ -141,6 +141,10 @@ class GeoDistributedLRUCache:
         """
         Cleans the expired data in the cache
         """
+        current_time = datetime.now()
+        keys_to_delete = []
         for key, value in self.cache.items():
-            if datetime.now() - value[1] > timedelta(seconds=self.expiration_time):
-                self.cache.pop(key)
+            if current_time - value[1] > timedelta(seconds=self.expiration_time):
+                keys_to_delete.append(key)
+        for key in keys_to_delete:
+            del self.cache[key]
