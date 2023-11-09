@@ -24,7 +24,7 @@ On Linux / Mac OS
 `pip3 intall -r requirements.txt`
 
 Then run `python main.py` or `python3 main.py`
-If you want to run the tests, run `pytest`
+If you want to run the tests, run `pytest -v`
  
 
 ## Question C
@@ -46,3 +46,19 @@ At Ormuco, we want to optimize every bits of software we write. Your goal is to 
     6 - Flexible Schema
 
     7 - Cache can expire 
+
+### To run this
+Go to `cd question_c`
+Create a virtual enviornment with Python
+On Windows: `python -m venv venv` and then activate it with `.\venv\Scripts\activate`
+On Linux / Mac OS: `python3 -m virtualenv venv` and then activate it with `source venv/bin/activate`
+
+Install the dependencies:
+On Windows
+`pip install -r requirements.txt`
+
+On Linux / Mac OS
+`pip3 intall -r requirements.txt`
+
+Then run `python main.py` or `python3 main.py`
+If you want to run the tests, run `pytest -v`
